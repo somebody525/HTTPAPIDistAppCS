@@ -156,6 +156,7 @@ namespace HTTPAPIDistAppServer {
             var data = Encoding.UTF8.GetBytes(json);
 
             //var data = System.Text.Encoding.UTF8.GetBytes("Hello World from the ASP.Net CORE!");
+           context.Response.ContentType = "application/json";
             await context.Response.Body.WriteAsync(data, 0, data.Length);
         }
 
